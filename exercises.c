@@ -129,13 +129,13 @@ int parentesisBalanceados(char *cadena) {
       while (cadena[i] != '\0')
       {
          char elemento = cadena[i];
-         push(Pila1, elemento);
+         push(Pila1, (void*)elemento);
          i++;
       }
       for (size_t i = 0; i < (strlen(cadena) / 2); i++)
       {
          char letra = (char)top(Pila1);
-         push(Pila2,letra);
+         push(Pila2,(void*)letra);
          pop(Pila1);
       }
       for (size_t i = 0; i < (strlen(cadena) / 2); i++)
@@ -149,5 +149,5 @@ int parentesisBalanceados(char *cadena) {
       }
       return 1;
    }
-   return 1;
+   return 0;
    }

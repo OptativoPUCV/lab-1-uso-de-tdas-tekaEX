@@ -103,3 +103,20 @@ stack.h:11:6: note: expected 'void *' but argument is of type 'char'
 cc1.exe: all warnings being treated as errors
 Compilation failed
 bd6b6f5
+Sun, Mar 23, 2025 11:57:57 AM: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:132:22: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+          push(Pila1, (void*)elemento);
+                      ^
+exercises.c:137:23: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+          char letra = (char)top(Pila1);
+                       ^
+exercises.c:138:21: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+          push(Pila2,(void*)letra);
+                     ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+c527310
