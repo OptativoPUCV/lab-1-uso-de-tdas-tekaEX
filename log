@@ -137,3 +137,20 @@ exercises.c:138:28: error: cast to pointer from integer of different size [-Werr
 cc1.exe: all warnings being treated as errors
 Compilation failed
 a842b88
+Sun, Mar 23, 2025  1:05:37 PM: 
+ exercises.c | 32 ++++++++++++++++----------------
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:141:39: error: comparison between pointer and integer [-Werror]
+          if ((elemento == ')' && tope != '(') || (elemento == '}' && tope != '{') || (elemento == ']' && tope != '['))
+                                       ^~
+exercises.c:141:75: error: comparison between pointer and integer [-Werror]
+          if ((elemento == ')' && tope != '(') || (elemento == '}' && tope != '{') || (elemento == ']' && tope != '['))
+                                                                           ^~
+exercises.c:141:111: error: comparison between pointer and integer [-Werror]
+          if ((elemento == ')' && tope != '(') || (elemento == '}' && tope != '{') || (elemento == ']' && tope != '['))
+                                                                                                               ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+14e9a76
