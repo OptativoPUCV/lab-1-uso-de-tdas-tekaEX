@@ -154,3 +154,14 @@ exercises.c:141:111: error: comparison between pointer and integer [-Werror]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 14e9a76
+Sun, Mar 23, 2025  1:55:58 PM: 
+ exercises.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:138:22: error: initialization makes integer from pointer without a cast [-Werror=int-conversion]
+          char tope = (char*)top(Pila);
+                      ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+0d505f0
