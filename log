@@ -165,3 +165,23 @@ exercises.c:138:22: error: initialization makes integer from pointer without a c
 cc1.exe: all warnings being treated as errors
 Compilation failed
 0d505f0
+Sun, Mar 23, 2025  2:10:50 PM: 
+ exercises.c | 14 +++++---------
+ 1 file changed, 5 insertions(+), 9 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:130:21: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+          push(Pila, elemento);
+                     ^~~~~~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'void *' but argument is of type 'char'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:138:64: error: multi-character character constant [-Werror=multichar]
+          if ((elemento == '(' && *tope != ')') || (elemento == '{}' && *tope != '}') || (elemento == '[' && *tope != ']'))
+                                                                ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+8f72a84
