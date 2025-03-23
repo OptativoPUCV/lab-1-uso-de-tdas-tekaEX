@@ -58,12 +58,12 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   int*actual = first(L);
-   int sum;
+   int* actual = (int*)first(L);
+   int sum = 0;
    while (actual != NULL)
    {
-      sum += (*actual);
-      actual = next(L);
+      sum += *actual;
+      actual = (int*)next(L);
    }  
    return sum;
 }
@@ -78,7 +78,15 @@ posiciona en el elemento anterior.
 */
 
 void eliminaElementos(List*L, int elem){
-
+   int* actual = (int*)first(L);
+   while (actual != NULL)
+   {
+      if (*actual == elem)
+      {
+         popCurrent(L);
+      }
+      actual = (int*)next(L);
+   }
 }
 
 /*
